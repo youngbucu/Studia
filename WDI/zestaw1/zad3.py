@@ -21,7 +21,6 @@ for i in range(1,df(x)):
     s=fib(i)
     for j in range(i+1,df(x)):
         s=s+fib(j)
-        print(s)
         if s==x:
             z=1
 if z==1:
