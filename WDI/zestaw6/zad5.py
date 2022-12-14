@@ -2,6 +2,7 @@ import math as m
 
 T=[]
 found=False
+overflow=False
 
 def bd(n):
     wynik=0
@@ -31,10 +32,13 @@ def rek(i=0):
     while True:
         l+=str(T[i])
         i+=1
+        if len(l)==30:
+            overflow=True
+            return
         if isPrimeB(int(l)):
             print(l)
             rek(i)
-        if i==len(T) or found:
+        if i==len(T) or found or overflow:
             return
 
 def main():
